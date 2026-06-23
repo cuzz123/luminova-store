@@ -440,7 +440,6 @@ export const PRODUCTS: Product[] = [
       "Five opal glass globes cascade at staggered heights from a brass canopy. The Cascade is a modern centerpiece for dining rooms, grand entryways, and stairwells.",
     price: 499.0,
     compareAt: 599.0,
-    image: IMG.chandelier,
     images: [IMG.chandelier, IMG.chandelier, IMG.chandelier],
     features: [
       "5 opal glass globes",
@@ -466,7 +465,6 @@ export const PRODUCTS: Product[] = [
     description:
       "A mid-century starburst silhouette with 12 brass arms radiating from a central sphere. Fitted with globe bulbs for a warm, constellation-like effect.",
     price: 389.0,
-    image: IMG.chandelier,
     images: [IMG.chandelier, IMG.chandelier, IMG.chandelier],
     features: [
       "12-arm brass frame",
@@ -493,7 +491,6 @@ export const PRODUCTS: Product[] = [
       "An LED ring suspended by nearly invisible cables. The Luna floats like a halo above dining tables, delivering perfectly even, glare-free illumination.",
     price: 449.0,
     compareAt: undefined,
-    image: IMG.chandelier,
     images: [IMG.chandelier, IMG.chandelier, IMG.chandelier],
     features: [
       "Integrated 48W LED, 3000K",
