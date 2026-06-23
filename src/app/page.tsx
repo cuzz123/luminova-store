@@ -206,6 +206,7 @@ export default function HomePage() {
                 alt="Artisan hand-finishing brass fixture in Sonoma workshop"
                 className="absolute inset-0 h-full w-full object-cover"
               />
+            </div>
 
             {/* Right — text */}
             <div>
