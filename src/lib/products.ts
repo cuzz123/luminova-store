@@ -375,7 +375,7 @@ export const PRODUCTS: Product[] = [
       "A ribbed brass cylinder that casts a focused beam downward. Ideal as bedside reading sconces or flanking a bathroom mirror for warm, flattering light.",
     price: 109.0,
     image: IMG.sconceAdjust,
-    images: [IMG.sconceAdjustAdjustAdjust, IMG.sconceAdjustAdjustAdjust, IMG.sconceAdjustAdjustAdjust],
+    images: [IMG.sconceAdjust, IMG.sconceAdjust, IMG.sconceAdjust],
     features: [
       "Ribbed solid brass body",
       "Unlacquered — will patina over time",
@@ -401,7 +401,7 @@ export const PRODUCTS: Product[] = [
     price: 179.0,
     compareAt: 219.0,
     image: IMG.sconceGlobe,
-    images: [IMG.sconceGlobeGlobeGlobe, IMG.sconceGlobeGlobeGlobe, IMG.sconceGlobeGlobeGlobe],
+    images: [IMG.sconceGlobe, IMG.sconceGlobe, IMG.sconceGlobe],
     features: [
       "Antique brass finish",
       'Adjustable arm (12"–18" extension)',
@@ -479,7 +479,7 @@ export const PRODUCTS: Product[] = [
     description:
       "A mid-century starburst silhouette with 12 brass arms radiating from a central sphere. Fitted with globe bulbs for a warm, constellation-like effect.",
     price: 389.0,
-    images: [IMG.chandelierRusticRusticRustic, IMG.chandelierRusticRusticRustic, IMG.chandelierRusticRusticRustic],
+    images: [IMG.chandelierRustic, IMG.chandelierRustic, IMG.chandelierRustic],
     features: [
       "12-arm brass frame",
       "Matte black + brass finish options",
