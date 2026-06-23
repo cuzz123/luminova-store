@@ -53,7 +53,12 @@ const TRUST_SIGNALS = [
 /*  Instagram placeholder colors                                       */
 /* ------------------------------------------------------------------ */
 
-const INSTAGRAM_PLACEHOLDERS = ["#d4cfc4", "#c9b896", "#b85f46", "#3a4a44"];
+const INSTAGRAM_IMAGES = [
+  "https://platform-outputs.agnes-ai.space/images/t2i/8d792d86638d4212b5bab6fd4c750ad4.png",
+  "https://platform-outputs.agnes-ai.space/images/t2i/bea1ef5533d34178943fc8f459ac4578.png",
+  "https://platform-outputs.agnes-ai.space/images/t2i/2aef12e05fbe4997a08ea4e072f62820.png",
+  "https://platform-outputs.agnes-ai.space/images/t2i/2b232520869d4e2f812230e46026f0e0.png",
+];
 
 /* ------------------------------------------------------------------ */
 /*  Page                                                               */
@@ -194,14 +199,13 @@ export default function HomePage() {
       <section className="bg-[#e1dcd0] py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
-            {/* Left — placeholder image */}
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-lg bg-[#d4cfc4]">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="text-sm font-medium uppercase tracking-widest text-[#b8b0a4]">
-                  Flint &amp; Beam Workshop
-                </span>
-              </div>
-            </div>
+            {/* Left — workshop image */}
+            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-lg">
+              <img
+                src="https://platform-outputs.agnes-ai.space/images/t2i/2aef12e05fbe4997a08ea4e072f62820.png"
+                alt="Artisan hand-finishing brass fixture in Sonoma workshop"
+                className="absolute inset-0 h-full w-full object-cover"
+              />
 
             {/* Right — text */}
             <div>
@@ -305,18 +309,17 @@ export default function HomePage() {
 
           {/* ---- Image grid ---- */}
           <div className="mt-12 grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-4">
-            {INSTAGRAM_PLACEHOLDERS.map((color, i) => (
+            {INSTAGRAM_IMAGES.map((src, i) => (
               <div
                 key={i}
                 className="relative aspect-square w-full overflow-hidden rounded-lg"
-                style={{ backgroundColor: color }}
               >
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <InstagramIcon
-                    className="h-8 w-8 text-white/50"
-                    strokeWidth={1.5}
-                  />
-                </div>
+                <img
+                  src={src}
+                  alt={`Flint & Beam — brand story ${i + 1}`}
+                  className="absolute inset-0 h-full w-full object-cover"
+                  loading="lazy"
+                />
               </div>
             ))}
           </div>

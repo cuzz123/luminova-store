@@ -123,8 +123,8 @@ export default function AboutPage() {
           >
             <div className="w-full h-full flex items-center justify-center">
               <Image
-                src="/images/about/workshop.jpg"
-                alt="Flint & Beam workshop in Sonoma"
+                src="https://platform-outputs.agnes-ai.space/images/t2i/2aef12e05fbe4997a08ea4e072f62820.png"
+                alt="Artisan hand-finishing a brass lighting fixture in Sonoma workshop"
                 width={600}
                 height={750}
                 className="w-full h-full object-cover"
@@ -236,7 +236,7 @@ export default function AboutPage() {
             >
               <div className="w-full h-full flex items-center justify-center">
                 <Image
-                  src="/images/about/sonoma-workshop.jpg"
+                  src="https://platform-outputs.agnes-ai.space/images/t2i/2b232520869d4e2f812230e46026f0e0.png"
                   alt="The Sonoma workshop interior"
                   width={600}
                   height={750}
