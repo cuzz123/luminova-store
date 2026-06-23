@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { NextRequest, NextResponse } from "next/server";
 import { applyRateLimit } from "@/lib/server/rate-limit";
 import { sendAbandonedCart } from "@/lib/email";

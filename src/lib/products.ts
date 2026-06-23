@@ -11,15 +11,22 @@ export interface Product {
   name: string;
   slug: string;
   category: string;
+  categorySlug?: string;
+  sku?: string;
   description: string;
   price: number;
-  compareAt?: number;
+  compareAt?: number | null;
   image: string;
   images: string[];
   features: string[];
+  features_specs?: string[];
+  specs?: string;
   tag?: string;
+  tags?: string[];
   isBestSeller: boolean;
   isNew: boolean;
+  isActive: boolean;
+  inStock: boolean;
   rating: number;
   reviewCount: number;
 }
@@ -68,6 +75,8 @@ export const PRODUCTS: Product[] = [
     tag: "Bestseller",
     isBestSeller: true,
     isNew: false,
+    isActive: true,
+    inStock: true,
     rating: 4.8,
     reviewCount: 142,
   },
@@ -92,6 +101,8 @@ export const PRODUCTS: Product[] = [
     tag: "New Arrival",
     isBestSeller: false,
     isNew: true,
+    isActive: true,
+    inStock: true,
     rating: 4.6,
     reviewCount: 87,
   },
@@ -116,6 +127,8 @@ export const PRODUCTS: Product[] = [
     tag: undefined,
     isBestSeller: false,
     isNew: false,
+    isActive: true,
+    inStock: true,
     rating: 4.5,
     reviewCount: 63,
   },
@@ -139,6 +152,8 @@ export const PRODUCTS: Product[] = [
     tag: "Limited Edition",
     isBestSeller: false,
     isNew: true,
+    isActive: true,
+    inStock: true,
     rating: 4.9,
     reviewCount: 31,
   },
@@ -165,6 +180,8 @@ export const PRODUCTS: Product[] = [
     tag: "Bestseller",
     isBestSeller: true,
     isNew: false,
+    isActive: true,
+    inStock: true,
     rating: 4.7,
     reviewCount: 198,
   },
@@ -188,6 +205,8 @@ export const PRODUCTS: Product[] = [
     tag: undefined,
     isBestSeller: false,
     isNew: false,
+    isActive: true,
+    inStock: true,
     rating: 4.4,
     reviewCount: 56,
   },
@@ -212,6 +231,8 @@ export const PRODUCTS: Product[] = [
     tag: "Premium",
     isBestSeller: false,
     isNew: false,
+    isActive: true,
+    inStock: true,
     rating: 4.8,
     reviewCount: 42,
   },
@@ -238,6 +259,8 @@ export const PRODUCTS: Product[] = [
     tag: "Bestseller",
     isBestSeller: true,
     isNew: false,
+    isActive: true,
+    inStock: true,
     rating: 4.6,
     reviewCount: 114,
   },
@@ -261,6 +284,8 @@ export const PRODUCTS: Product[] = [
     tag: undefined,
     isBestSeller: false,
     isNew: true,
+    isActive: true,
+    inStock: true,
     rating: 4.7,
     reviewCount: 73,
   },
@@ -285,6 +310,8 @@ export const PRODUCTS: Product[] = [
     tag: "Energy Efficient",
     isBestSeller: false,
     isNew: true,
+    isActive: true,
+    inStock: true,
     rating: 4.5,
     reviewCount: 38,
   },
@@ -311,6 +338,8 @@ export const PRODUCTS: Product[] = [
     tag: "Bestseller",
     isBestSeller: true,
     isNew: false,
+    isActive: true,
+    inStock: true,
     rating: 4.8,
     reviewCount: 161,
   },
@@ -334,6 +363,8 @@ export const PRODUCTS: Product[] = [
     tag: undefined,
     isBestSeller: false,
     isNew: false,
+    isActive: true,
+    inStock: true,
     rating: 4.3,
     reviewCount: 49,
   },
@@ -358,6 +389,8 @@ export const PRODUCTS: Product[] = [
     tag: "Premium",
     isBestSeller: false,
     isNew: false,
+    isActive: true,
+    inStock: true,
     rating: 4.9,
     reviewCount: 27,
   },
@@ -381,6 +414,8 @@ export const PRODUCTS: Product[] = [
     tag: "Artisan",
     isBestSeller: false,
     isNew: true,
+    isActive: true,
+    inStock: true,
     rating: 4.6,
     reviewCount: 18,
   },
@@ -407,6 +442,8 @@ export const PRODUCTS: Product[] = [
     tag: "Bestseller",
     isBestSeller: true,
     isNew: false,
+    isActive: true,
+    inStock: true,
     rating: 4.7,
     reviewCount: 93,
   },
@@ -430,6 +467,8 @@ export const PRODUCTS: Product[] = [
     tag: "Statement Piece",
     isBestSeller: false,
     isNew: false,
+    isActive: true,
+    inStock: true,
     rating: 4.5,
     reviewCount: 64,
   },
@@ -454,6 +493,8 @@ export const PRODUCTS: Product[] = [
     tag: "Modern Minimalist",
     isBestSeller: false,
     isNew: true,
+    isActive: true,
+    inStock: true,
     rating: 4.8,
     reviewCount: 41,
   },
@@ -480,6 +521,8 @@ export const PRODUCTS: Product[] = [
     tag: "Bestseller",
     isBestSeller: true,
     isNew: false,
+    isActive: true,
+    inStock: true,
     rating: 4.4,
     reviewCount: 205,
   },
@@ -503,6 +546,8 @@ export const PRODUCTS: Product[] = [
     tag: undefined,
     isBestSeller: false,
     isNew: false,
+    isActive: true,
+    inStock: true,
     rating: 4.3,
     reviewCount: 52,
   },
@@ -527,6 +572,8 @@ export const PRODUCTS: Product[] = [
     tag: undefined,
     isBestSeller: false,
     isNew: false,
+    isActive: true,
+    inStock: true,
     rating: 4.5,
     reviewCount: 78,
   },
@@ -550,6 +597,8 @@ export const PRODUCTS: Product[] = [
     tag: "Portable",
     isBestSeller: false,
     isNew: true,
+    isActive: true,
+    inStock: true,
     rating: 4.6,
     reviewCount: 34,
   },
@@ -574,6 +623,8 @@ export const PRODUCTS: Product[] = [
     tag: "Bestseller",
     isBestSeller: true,
     isNew: false,
+    isActive: true,
+    inStock: true,
     rating: 4.7,
     reviewCount: 276,
   },

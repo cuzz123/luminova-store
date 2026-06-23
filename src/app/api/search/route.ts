@@ -60,7 +60,7 @@ export async function GET(request: NextRequest) {
       if (description.includes(searchTerm)) score += 5;
 
       // Boost bestsellers and highly rated
-      if (product.bestseller) score += 10;
+      if (product.isBestSeller) score += 10;
       if (product.rating && product.rating >= 4.5) score += 5;
 
       return { product, score };
