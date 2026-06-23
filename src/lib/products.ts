@@ -6,17 +6,26 @@
 const IMG = {
   chandelier: "https://platform-outputs.agnes-ai.space/images/t2i/1ce244ee5f4d4ec78bbc779a9bdeff9e.png",
   chandelierModern: "https://platform-outputs.agnes-ai.space/images/t2i/b6801ba9f1eb4ef4a3a1c7b663cd9ebb.png",
+  chandelierRustic: "https://platform-outputs.agnes-ai.space/images/t2i/9e075f24e38340199161ea55aced857c.png",
   pendantGlass: "https://platform-outputs.agnes-ai.space/images/t2i/dee9109f8fb34949956a22cc32eb23f4.png",
   pendantPrism: "https://platform-outputs.agnes-ai.space/images/t2i/0d7ba980dc374e57b02b3cc7949a390c.png",
   pendantRattan: "https://platform-outputs.agnes-ai.space/images/t2i/71677c4839ad4876a193587f52f673fe.png",
+  pendantDrum: "https://platform-outputs.agnes-ai.space/images/t2i/b0fd7c3d82a1482e939ccf5b97ad6932.png",
   sconce: "https://platform-outputs.agnes-ai.space/images/t2i/91c64ae16ce145d38f8270f76db9962f.png",
+  sconceAdjust: "https://platform-outputs.agnes-ai.space/images/t2i/bb46ad2a93014b5aac02ca35571cc8d5.png",
+  sconceGlobe: "https://platform-outputs.agnes-ai.space/images/t2i/a2573e4684a24af08b4199120023c4fc.png",
   tableCeramic: "https://platform-outputs.agnes-ai.space/images/t2i/36b7f8ff72134f468c5ac093e98fba63.png",
   tableConcrete: "https://platform-outputs.agnes-ai.space/images/t2i/50e95d15799b49c1bcaaa37b467a67f8.png",
   tableMarble: "https://platform-outputs.agnes-ai.space/images/t2i/b683eb9bf24c4066a7560ba579b6f732.png",
   floorArc: "https://platform-outputs.agnes-ai.space/images/t2i/5b5251ee58e249efba680ef7e3ca9e22.png",
   outdoorWall: "https://platform-outputs.agnes-ai.space/images/t2i/7b4e011a3b11418c96074ab3e5051059.png",
   outdoorPath: "https://platform-outputs.agnes-ai.space/images/t2i/4440b429209f4a02b7878843f43b300c.png",
-  chandelierAlt: "https://platform-outputs.agnes-ai.space/images/t2i/31d085d0f6524b6c89940b2fe07024ed.png",
+  outdoorBollard: "https://platform-outputs.agnes-ai.space/images/t2i/728a3a492c7c4bdb838e27b1d11c2daf.png",
+  outdoorHanging: "https://platform-outputs.agnes-ai.space/images/t2i/c0ad2b2f2c174d3f99bbb24c77a24d6d.png",
+  storyCraft: "https://platform-outputs.agnes-ai.space/images/t2i/2aef12e05fbe4997a08ea4e072f62820.png",
+  storyMaterials: "https://platform-outputs.agnes-ai.space/images/t2i/8d792d86638d4212b5bab6fd4c750ad4.png",
+  storyPack: "https://platform-outputs.agnes-ai.space/images/t2i/bea1ef5533d34178943fc8f459ac4578.png",
+  storyWorkshop: "https://platform-outputs.agnes-ai.space/images/t2i/2b232520869d4e2f812230e46026f0e0.png",
 };
 const PLACEHOLDER = IMG.chandelier;
 
@@ -103,8 +112,8 @@ export const PRODUCTS: Product[] = [
       "A sleek aluminum cone pendant in matte black. Minimalist geometry meets warm light — ideal for modern kitchens, bar counters, and commercial spaces.",
     price: 149.0,
     compareAt: undefined,
-    image: IMG.pendantGlass,
-    images: [IMG.pendantGlass, IMG.pendantGlass, IMG.pendantGlass],
+    image: IMG.pendantDrum,
+    images: [IMG.pendantDrum, IMG.pendantDrum, IMG.pendantDrum],
     features: [
       "Powder-coated aluminum shade",
       "Matte black finish",
@@ -365,8 +374,8 @@ export const PRODUCTS: Product[] = [
     description:
       "A ribbed brass cylinder that casts a focused beam downward. Ideal as bedside reading sconces or flanking a bathroom mirror for warm, flattering light.",
     price: 109.0,
-    image: IMG.sconce,
-    images: [IMG.sconce, IMG.sconce, IMG.sconce],
+    image: IMG.sconceAdjust,
+    images: [IMG.sconceAdjustAdjustAdjust, IMG.sconceAdjustAdjustAdjust, IMG.sconceAdjustAdjustAdjust],
     features: [
       "Ribbed solid brass body",
       "Unlacquered — will patina over time",
@@ -391,8 +400,8 @@ export const PRODUCTS: Product[] = [
       "A classic library-style picture light in antique brass. The Cove directs a wide, even beam across artwork or bookshelves — art gallery quality at home.",
     price: 179.0,
     compareAt: 219.0,
-    image: IMG.sconce,
-    images: [IMG.sconce, IMG.sconce, IMG.sconce],
+    image: IMG.sconceGlobe,
+    images: [IMG.sconceGlobeGlobeGlobe, IMG.sconceGlobeGlobeGlobe, IMG.sconceGlobeGlobeGlobe],
     features: [
       "Antique brass finish",
       'Adjustable arm (12"–18" extension)',
@@ -466,11 +475,11 @@ export const PRODUCTS: Product[] = [
     name: "Sputnik Starburst Chandelier",
     slug: "sputnik-starburst-chandelier",
     category: "chandeliers",
-    image: IMG.chandelier,
+    image: IMG.chandelierRustic,
     description:
       "A mid-century starburst silhouette with 12 brass arms radiating from a central sphere. Fitted with globe bulbs for a warm, constellation-like effect.",
     price: 389.0,
-    images: [IMG.chandelier, IMG.chandelier, IMG.chandelier],
+    images: [IMG.chandelierRusticRusticRustic, IMG.chandelierRusticRusticRustic, IMG.chandelierRusticRusticRustic],
     features: [
       "12-arm brass frame",
       "Matte black + brass finish options",
@@ -523,8 +532,8 @@ export const PRODUCTS: Product[] = [
       "A classic lantern-style path light in weatherproof bronze. Perfect for lining walkways, garden borders, and driveways with a warm welcome.",
     price: 89.0,
     compareAt: 109.0,
-    image: IMG.outdoorWall,
-    images: [IMG.outdoorWall, IMG.outdoorWall, IMG.outdoorWall],
+    image: IMG.outdoorPath,
+    images: [IMG.outdoorPath, IMG.outdoorPath, IMG.outdoorPath],
     features: [
       "Die-cast aluminum, bronze finish",
       "IP65 weatherproof rating",
@@ -548,8 +557,8 @@ export const PRODUCTS: Product[] = [
     description:
       "A sleek cylindrical bollard with a 360-degree light aperture. The Dune defines perimeters and driveways with a clean, architectural glow.",
     price: 119.0,
-    image: IMG.outdoorWall,
-    images: [IMG.outdoorWall, IMG.outdoorWall, IMG.outdoorWall],
+    image: IMG.outdoorBollard,
+    images: [IMG.outdoorBollard, IMG.outdoorBollard, IMG.outdoorBollard],
     features: [
       "304 stainless steel, brushed finish",
       "IP65 weatherproof",
@@ -599,8 +608,8 @@ export const PRODUCTS: Product[] = [
     description:
       "A rechargeable, portable table lamp inspired by campfire embers. IP65 rated, dimmable, and built for dinner al fresco late into the evening.",
     price: 79.0,
-    image: IMG.outdoorWall,
-    images: [IMG.outdoorWall, IMG.outdoorWall, IMG.outdoorWall],
+    image: IMG.outdoorBollard,
+    images: [IMG.outdoorBollard, IMG.outdoorBollard, IMG.outdoorBollard],
     features: [
       "Rechargeable, 20-hour battery life",
       "IP65 waterproof",
@@ -625,8 +634,8 @@ export const PRODUCTS: Product[] = [
       "A 48-foot festoon string with 15 shatterproof LED globes. Transform any backyard, patio, or event space into a warm, festive setting in minutes.",
     price: 129.0,
     compareAt: 159.0,
-    image: IMG.outdoorWall,
-    images: [IMG.outdoorWall, IMG.outdoorWall, IMG.outdoorWall],
+    image: IMG.outdoorHanging,
+    images: [IMG.outdoorHanging, IMG.outdoorHanging, IMG.outdoorHanging],
     features: [
       "48 ft string, 15 sockets",
       "Shatterproof PET globes",
