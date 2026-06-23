@@ -1,0 +1,29 @@
+# Flint & Beam
+
+## Project
+Flint & Beam is a handcrafted lighting brand based in Sonoma, California. Each piece is built to order in our workshop using time-honored techniques. Raw brass, hand-blown glass, California hardwoods. No mass production — every fixture is one of a kind.
+
+## Key pages
+- [Home](/) — Artisan lighting, hand-finished in California
+- [Shop All](/products) — Browse our full collection of handcrafted fixtures
+- [About](/about) — Our story, workshop, and craftsmanship philosophy
+- [FAQ](/faq) — Frequently asked questions about ordering, shipping, and care
+- [Contact](/contact) — Get in touch with our Sonoma workshop
+- [Cart](/cart) — Review your selected pieces
+- [Checkout](/checkout) — Complete your order
+- [Wishlist](/wishlist) — Saved pieces you love
+- [Search](/search) — Find the perfect fixture
+- [Track Order](/track-order) — Follow your build from workshop to doorstep
+- [Privacy](/privacy) — Privacy policy
+- [Terms](/terms) — Terms of service
+- [Shipping](/shipping) — Shipping information
+- [Refund](/refund) — Returns and refunds
+- [Sign In](/auth/signin) — Account sign in
+- [Register](/auth/register) — Create an account
+
+## Collections
+- [Pendants](/products?category=pendants)
+- [Sconces](/products?category=sconces)
+- [Chandeliers](/products?category=chandeliers)
+- [Flush Mounts](/products?category=flush-mounts)
+- [Outdoor](/products?category=outdoor)

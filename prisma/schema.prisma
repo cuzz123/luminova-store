@@ -1,0 +1,157 @@
+// ─────────────────────────────────────────────
+// Prisma Schema — Flint & Beam (Luminova Store)
+// PostgreSQL provider (Neon)
+// ─────────────────────────────────────────────
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ── NextAuth / Auth.js ──────────────────────
+
+model User {
+  id             String     @id @default(cuid())
+  name           String?
+  email          String     @unique
+  password       String?
+  emailVerified  DateTime?
+  image          String?
+  role           String     @default("CUSTOMER")
+  createdAt      DateTime   @default(now())
+  updatedAt      DateTime   @updatedAt
+
+  orders   Order[]
+  accounts Account[]
+  sessions Session[]
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  identifier String
+  token      String
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+// ── Catalog ─────────────────────────────────
+
+model Category {
+  id          String    @id @default(cuid())
+  name        String
+  slug        String    @unique
+  description String?
+  image       String?
+  sortOrder   Int       @default(0)
+  createdAt   DateTime  @default(now())
+
+  products Product[]
+}
+
+model Product {
+  id           String   @id @default(cuid())
+  name         String
+  slug         String   @unique
+  description  String
+  price        Float
+  compareAt    Float?
+  image        String
+  images       String   @default("[]")
+  features     String[]
+  tag          String?
+  categoryId   String?
+  isActive     Boolean  @default(true)
+  isBestSeller Boolean  @default(false)
+  isNew        Boolean  @default(false)
+  rating       Float    @default(4.5)
+  reviewCount  Int      @default(0)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  category Category?   @relation(fields: [categoryId], references: [id])
+  items    OrderItem[]
+}
+
+// ── Orders ──────────────────────────────────
+
+model Order {
+  id              String   @id @default(cuid())
+  userId          String?
+  email           String?
+  status          String   @default("PENDING")
+  subtotal        Float    @default(0)
+  shipping        Float    @default(0)
+  discount        Float    @default(0)
+  total           Float    @default(0)
+  shippingAddress String   @default("{}")
+  trackingNumber  String?
+  notes           String?
+  paypalOrderId   String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  user  User?       @relation(fields: [userId], references: [id])
+  items OrderItem[]
+}
+
+model OrderItem {
+  id        String @id @default(cuid())
+  orderId   String
+  productId String
+  quantity  Int    @default(1)
+  price     Float
+
+  order   Order   @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  product Product @relation(fields: [productId], references: [id])
+}
+
+// ── Promotions ──────────────────────────────
+
+model DiscountCode {
+  id          String    @id @default(cuid())
+  code        String    @unique
+  type        String    @default("percentage")
+  value       Float
+  label       String
+  description String?
+  minSubtotal Float     @default(0)
+  maxUses     Int       @default(0)
+  usedCount   Int       @default(0)
+  isActive    Boolean   @default(true)
+  startsAt    DateTime  @default(now())
+  expiresAt   DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}

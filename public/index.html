@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flint &amp; Beam — Artisan Lighting, Hand-Finished in California</title>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ffffff;
+    --sand: #e1dcd0;
+    --dark: #303e39;
+    --heading: #111111;
+    --body: #555555;
+    --border: #ebebeb;
+    --accent: #c25b3e;
+    --gold: #d4a85c;
+    --font: 'Jost', sans-serif;
+  }
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font); color: var(--body); background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  a { text-decoration: none; color: inherit; }
+  ul { list-style: none; }
+  img { display: block; max-width: 100%; height: auto; }
+  .container { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+
+  /* Announcement */
+  .ann-bar { background: var(--dark); color: #fff; text-align: center; padding: 10px 20px; font-size: 13px; letter-spacing: 0.3px; }
+  .ann-bar strong { color: var(--gold); }
+
+  /* Header */
+  .header { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+  .header-inner { display: flex; align-items: center; justify-content: space-between; height: 68px; max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+  .logo { font-size: 24px; font-weight: 600; color: var(--heading); letter-spacing: -0.3px; }
+  .logo span { font-weight: 300; color: var(--accent); }
+  .nav { display: flex; gap: 32px; }
+  .nav a { font-size: 13.5px; font-weight: 500; color: var(--heading); text-transform: uppercase; letter-spacing: 0.8px; position: relative; padding: 4px 0; }
+  .nav a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 1.5px; background: var(--accent); transition: width 0.25s; }
+  .nav a:hover::after { width: 100%; }
+  .header-actions { display: flex; align-items: center; gap: 16px; }
+  .header-actions button { background: none; border: none; cursor: pointer; font-size: 19px; color: var(--heading); width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; border-radius: 50%; transition: background 0.2s; position: relative; }
+  .header-actions button:hover { background: #f5f5f5; }
+  .icon { font-size: 19px; line-height: 1; }
+  .badge { position: absolute; top: 2px; right: 2px; background: var(--accent); color: #fff; font-size: 10px; font-weight: 700; min-width: 17px; height: 17px; border-radius: 9px; display: flex; align-items: center; justify-content: center; }
+
+  /* Hero — single image, editorial */
+  .hero { display: grid; grid-template-columns: 1fr 1fr; min-height: 88vh; background: var(--sand); }
+  .hero-img { overflow: hidden; }
+  .hero-img img { width: 100%; height: 100%; object-fit: cover; }
+  .hero-text { display: flex; flex-direction: column; justify-content: center; padding: clamp(40px,8vw,100px); }
+  .hero-kicker { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 4px; color: var(--accent); margin-bottom: 16px; }
+  .hero-title { font-size: clamp(32px,5vw,54px); font-weight: 600; color: var(--heading); line-height: 1.08; margin-bottom: 18px; }
+  .hero-desc { font-size: 16px; color: var(--body); max-width: 420px; margin-bottom: 30px; line-height: 1.75; }
+  .btn { display: inline-flex; align-items: center; gap: 6px; padding: 13px 28px; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; border: none; cursor: pointer; transition: all 0.25s; font-family: var(--font); border-radius: 2px; }
+  .btn-dark { background: var(--heading); color: #fff; }
+  .btn-dark:hover { background: var(--dark); }
+  .btn-ghost { background: transparent; color: var(--heading); border: 1px solid var(--heading); }
+  .btn-ghost:hover { background: var(--heading); color: #fff; }
+  .hero-stats { display: flex; gap: 32px; margin-top: 40px; padding-top: 28px; border-top: 1px solid rgba(0,0,0,0.08); }
+  .hero-stat-num { font-size: 22px; font-weight: 600; color: var(--heading); }
+  .hero-stat-label { font-size: 12px; color: var(--body); text-transform: uppercase; letter-spacing: 1px; margin-top: 2px; }
+
+  /* Trust bar */
+  .trust-bar { display: flex; justify-content: center; gap: 56px; padding: 28px 32px; border-bottom: 1px solid var(--border); font-size: 13px; font-weight: 500; color: var(--heading); flex-wrap: wrap; }
+  .trust-bar span { display: flex; align-items: center; gap: 8px; }
+
+  /* Section shared */
+  .section { padding: 72px 32px; max-width: 1280px; margin: 0 auto; }
+  .section-head { text-align: center; margin-bottom: 44px; }
+  .section-head-kicker { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 3px; color: var(--accent); margin-bottom: 6px; }
+  .section-head-title { font-size: 30px; font-weight: 600; color: var(--heading); }
+  .section-head-sub { font-size: 15px; color: var(--body); margin-top: 10px; max-width: 500px; margin-left: auto; margin-right: auto; }
+
+  /* Product grid — 3-col on desktop */
+  .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  .prod-card { cursor: pointer; }
+  .prod-card-img { position: relative; aspect-ratio: 4/5; overflow: hidden; background: #f5f3f0; border-radius: 3px; margin-bottom: 14px; }
+  .prod-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+  .prod-card:hover .prod-card-img img { transform: scale(1.03); }
+  .prod-badge { position: absolute; top: 10px; left: 10px; background: var(--accent); color: #fff; font-size: 10px; font-weight: 600; padding: 4px 8px; border-radius: 2px; text-transform: uppercase; letter-spacing: 0.8px; }
+  .prod-quick-add { position: absolute; bottom: 10px; right: 10px; width: 36px; height: 36px; background: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; color: var(--heading); opacity: 0; transform: translateY(4px); transition: all 0.25s; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .prod-card:hover .prod-quick-add { opacity: 1; transform: translateY(0); }
+  .prod-tag { font-size: 11px; font-weight: 500; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 3px; }
+  .prod-name { font-size: 15px; font-weight: 500; color: var(--heading); margin-bottom: 6px; }
+  .prod-price { font-size: 15px; font-weight: 600; color: var(--heading); }
+  .prod-compare { font-size: 13px; color: #aaa; text-decoration: line-through; margin-left: 6px; font-weight: 400; }
+  .prod-review { font-size: 12px; color: #888; margin-top: 4px; }
+
+  /* Bestseller strip */
+  .beststrip { background: var(--sand); }
+  .beststrip .product-grid { margin-top: 0; }
+  .beststrip .section { padding-top: 64px; padding-bottom: 64px; }
+
+  /* Story — founder note */
+  .story { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+  .story-img img { width: 100%; aspect-ratio: 5/6; object-fit: cover; border-radius: 4px; }
+  .story-text h3 { font-size: 26px; font-weight: 600; color: var(--heading); margin-bottom: 16px; line-height: 1.3; }
+  .story-text p { font-size: 15px; color: var(--body); line-height: 1.8; margin-bottom: 12px; }
+  .story-text .byline { font-size: 13px; color: #999; margin-top: 20px; font-style: italic; }
+
+  /* Review cards */
+  .review-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .review-card { background: #f9f8f6; padding: 28px; border-radius: 4px; }
+  .review-stars { color: var(--gold); font-size: 15px; letter-spacing: 2px; margin-bottom: 10px; }
+  .review-card p { font-size: 14px; color: var(--body); line-height: 1.7; font-style: italic; }
+  .review-card .author { font-size: 13px; color: var(--heading); font-weight: 600; margin-top: 14px; font-style: normal; }
+  .review-card .verified { font-size: 11px; color: #aaa; }
+
+  /* Instagram grid */
+  .ig-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .ig-grid img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 3px; cursor: pointer; transition: opacity 0.3s; }
+  .ig-grid img:hover { opacity: 0.85; }
+
+  /* Newsletter */
+  .nl { background: var(--dark); color: #fff; text-align: center; padding: 64px 32px; }
+  .nl h3 { font-size: 26px; font-weight: 600; margin-bottom: 8px; }
+  .nl p { color: rgba(255,255,255,0.6); font-size: 14px; margin-bottom: 20px; }
+  .nl-form { display: flex; gap: 10px; max-width: 440px; margin: 0 auto; }
+  .nl-form input { flex: 1; padding: 13px 18px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.06); color: #fff; font-size: 14px; font-family: var(--font); border-radius: 2px; outline: none; }
+  .nl-form input::placeholder { color: rgba(255,255,255,0.35); }
+  .nl-form input:focus { border-color: var(--gold); }
+  .nl-form .btn { background: var(--gold); color: #111; }
+
+  /* Footer */
+  .footer { background: var(--dark); color: rgba(255,255,255,0.5); padding: 56px 32px 28px; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; max-width: 1280px; margin: 0 auto 36px; }
+  .footer h4 { color: #fff; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 18px; }
+  .footer p, .footer a { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 2.4; display: block; transition: color 0.2s; }
+  .footer a:hover { color: #fff; }
+  .footer-bot { display: flex; justify-content: space-between; align-items: center; max-width: 1280px; margin: 0 auto; padding-top: 22px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 12px; color: rgba(255,255,255,0.3); }
+  .footer-bot b { color: rgba(255,255,255,0.5); }
+
+  /* Mobile */
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-img { aspect-ratio: 4/3; order: -1; }
+    .hero-text { padding: 40px 24px 56px; }
+    .nav { display: none; }
+    .product-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .story { grid-template-columns: 1fr; gap: 32px; }
+    .review-grid { grid-template-columns: 1fr; }
+    .ig-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .trust-bar { gap: 24px; }
+  }
+  @media (max-width: 480px) {
+    .product-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .section, .beststrip .section { padding: 40px 16px; }
+    .nl { padding: 40px 20px; }
+    .nl-form { flex-direction: column; }
+    .hero-stats { flex-wrap: wrap; gap: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Announcement -->
+<div class="ann-bar">
+  Free shipping over $149 · Hand-finished in California · <strong>Spring Collection just landed</strong>
+</div>
+
+<!-- Header -->
+<header class="header">
+  <div class="header-inner">
+    <a href="/" class="logo">Flint <span>&amp;</span> Beam</a>
+    <nav class="nav">
+      <a href="#">Chandeliers</a>
+      <a href="#">Pendants</a>
+      <a href="#">Sconces</a>
+      <a href="#">Table Lamps</a>
+      <a href="#">Floor</a>
+      <a href="#">Outdoor</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon" aria-label="Search">⌕</button>
+      <button class="icon" aria-label="Account">👤</button>
+      <button class="icon" aria-label="Wishlist">♡</button>
+      <button aria-label="Cart"><span class="icon">🛒</span><span class="badge">0</span></button>
+    </div>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-text">
+    <p class="hero-kicker">Spring 26 · Hand-Finished in California</p>
+    <h1 class="hero-title">Light that makes<br>a room feel lived in</h1>
+    <p class="hero-desc">
+      Every piece is cast, finished, and assembled by hand in our Sonoma workshop.
+      No two are exactly alike — and that's the point.
+    </p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <a href="#" class="btn btn-dark">Shop the Collection →</a>
+      <a href="#" class="btn btn-ghost">Our Story</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="hero-stat-num">3,200+</div><div class="hero-stat-label">Homes lit</div></div>
+      <div><div class="hero-stat-num">4.9</div><div class="hero-stat-label">Avg. review</div></div>
+      <div><div class="hero-stat-num">5yr</div><div class="hero-stat-label">Warranty</div></div>
+    </div>
+  </div>
+  <div class="hero-img">
+    <img src="https://platform-outputs.agnes-ai.space/images/t2i/31d085d0f6524b6c89940b2fe07024ed.png" alt="Handcrafted brass chandelier in warm interior">
+  </div>
+</section>
+
+<!-- Trust Bar -->
+<div class="trust-bar">
+  <span>✈ Free shipping over $149</span>
+  <span>↩ 30-day trial, free returns</span>
+  <span>⭐ 4.9 from 600+ reviews</span>
+  <span>🔧 5-year warranty</span>
+</div>
+
+<!-- Best Sellers -->
+<div class="beststrip">
+<section class="section">
+  <div class="section-head">
+    <p class="section-head-kicker">Shop Bestsellers</p>
+    <h2 class="section-head-title">The pieces everyone asks about</h2>
+    <p class="section-head-sub">Our top-selling designs, each one hand-finished in Sonoma</p>
+  </div>
+  <div class="product-grid">
+    <article class="prod-card">
+      <div class="prod-card-img">
+        <span class="prod-badge">Best Seller</span>
+        <img src="https://platform-outputs.agnes-ai.space/images/t2i/31d085d0f6524b6c89940b2fe07024ed.png" alt="Sonoma Brass Chandelier" loading="lazy">
+        <div class="prod-quick-add">+</div>
+      </div>
+      <p class="prod-tag">Chandelier · Brass</p>
+      <h3 class="prod-name">Sonoma 8-Arm Chandelier</h3>
+      <span class="prod-price">$849</span>
+      <span class="prod-compare">$1,099</span>
+      <p class="prod-review">★ 4.9 · 142 reviews</p>
+    </article>
+    <article class="prod-card">
+      <div class="prod-card-img">
+        <img src="https://platform-outputs.agnes-ai.space/images/t2i/01cdec3104094c60adb70c528ea4c242.png" alt="Mendocino Table Lamp" loading="lazy">
+        <div class="prod-quick-add">+</div>
+      </div>
+      <p class="prod-tag">Table Lamp · Ceramic</p>
+      <h3 class="prod-name">Mendocino Ceramic Lamp</h3>
+      <span class="prod-price">$298</span>
+      <p class="prod-review">★ 4.8 · 89 reviews</p>
+    </article>
+    <article class="prod-card">
+      <div class="prod-card-img">
+        <span class="prod-badge">New</span>
+        <img src="https://platform-outputs.agnes-ai.space/images/t2i/9a1e74d46bd94a14b3f0a9c69f4e79c5.png" alt="Petaluma Wall Sconce" loading="lazy">
+        <div class="prod-quick-add">+</div>
+      </div>
+      <p class="prod-tag">Sconce · Alabaster</p>
+      <h3 class="prod-name">Petaluma Alabaster Sconce</h3>
+      <span class="prod-price">$375</span>
+      <p class="prod-review">★ 5.0 · 47 reviews</p>
+    </article>
+  </div>
+</section>
+</div>
+
+<!-- Founder Story -->
+<section class="section">
+  <div class="story">
+    <div class="story-img">
+      <img src="https://platform-outputs.agnes-ai.space/images/t2i/01cdec3104094c60adb70c528ea4c242.png" alt="Workshop">
+    </div>
+    <div class="story-text">
+      <h3>We left our design jobs to make lights that feel like home</h3>
+      <p>
+        After a decade designing for big furniture brands, we got tired of seeing the same
+        mass-produced fixtures in every catalog. So we rented a small workshop in Sonoma,
+        bought a kiln and a lathe, and started casting brass by hand.
+      </p>
+      <p>
+        Two years later, we're still here — still hand-finishing every piece, still refusing
+        to cut corners, still convinced that the right light can change the way a room
+        <em>feels</em>.
+      </p>
+      <p class="byline">— Mara &amp; Leo, founders</p>
+    </div>
+  </div>
+</section>
+
+<!-- Reviews -->
+<section class="section">
+  <div class="section-head">
+    <p class="section-head-kicker">From Our Customers</p>
+    <h2 class="section-head-title">What people are saying</h2>
+  </div>
+  <div class="review-grid">
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p>"I spent 3 months looking for a chandelier that didn't look like every other Home Depot fixture. The Sonoma is perfect — warm, substantial, and you can actually see the hand-finishing marks up close."</p>
+      <p class="author">Sarah K.</p>
+      <p class="verified">Verified buyer · Sonoma 8-Arm</p>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p>"Ordered two Petaluma sconces for our hallway. The alabaster gives off this soft, buttery glow that makes the whole space feel 10x more expensive. Install was dead simple too."</p>
+      <p class="author">James &amp; Tina M.</p>
+      <p class="verified">Verified buyer · Petaluma Sconce ×2</p>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p>"The Mendocino lamp arrived packed like a museum piece. You can tell these people actually care — the ceramic texture, the weight, the linen shade. Worth every dollar."</p>
+      <p class="author">David R.</p>
+      <p class="verified">Verified buyer · Mendocino Lamp</p>
+    </div>
+  </div>
+</section>
+
+<!-- Instagram -->
+<section class="section">
+  <div class="section-head">
+    <p class="section-head-kicker">Styled by You</p>
+    <h2 class="section-head-title">@flintandbeam in the wild</h2>
+    <p class="section-head-sub">Tag us for a chance to be featured</p>
+  </div>
+  <div class="ig-grid">
+    <img src="https://platform-outputs.agnes-ai.space/images/t2i/31d085d0f6524b6c89940b2fe07024ed.png" alt="Customer home 1" loading="lazy">
+    <img src="https://platform-outputs.agnes-ai.space/images/t2i/01cdec3104094c60adb70c528ea4c242.png" alt="Customer home 2" loading="lazy">
+    <img src="https://platform-outputs.agnes-ai.space/images/t2i/9a1e74d46bd94a14b3f0a9c69f4e79c5.png" alt="Customer home 3" loading="lazy">
+    <img src="https://platform-outputs.agnes-ai.space/images/t2i/31d085d0f6524b6c89940b2fe07024ed.png" alt="Customer home 4" loading="lazy">
+  </div>
+</section>
+
+<!-- Newsletter -->
+<div class="nl">
+  <h3>New pieces, early access, 10% off</h3>
+  <p>We release small batches. Subscribers see them first.</p>
+  <form class="nl-form" onsubmit="event.preventDefault()">
+    <input type="email" placeholder="Your email" required>
+    <button type="submit" class="btn">Subscribe</button>
+  </form>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <h4>Flint &amp; Beam</h4>
+      <p>Hand-finished lighting from<br>Sonoma, California.<br>Since 2024.</p>
+    </div>
+    <div>
+      <h4>Shop</h4>
+      <a href="#">Chandeliers</a><a href="#">Pendants</a><a href="#">Sconces</a><a href="#">Table Lamps</a><a href="#">Floor Lamps</a><a href="#">Outdoor</a>
+    </div>
+    <div>
+      <h4>Help</h4>
+      <a href="#">Shipping & Returns</a><a href="#">Warranty</a><a href="#">FAQ</a><a href="#">Contact</a><a href="#">Track Order</a>
+    </div>
+    <div>
+      <h4>About</h4>
+      <a href="#">Our Story</a><a href="#">Workshop</a><a href="#">Trade Program</a><a href="#">Journal</a><a href="#">Privacy</a>
+    </div>
+  </div>
+  <div class="footer-bot">
+    <span>&copy; 2026 <b>Flint &amp; Beam</b> · All rights reserved.</span>
+    <span>USD · Visa · MC · PayPal · Apple Pay</span>
+  </div>
+</footer>
+
+</body>
+</html>
