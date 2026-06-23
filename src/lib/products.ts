@@ -3,8 +3,17 @@
 /*  22 products across 6 categories with mock reviews.                */
 /* ------------------------------------------------------------------ */
 
-const PLACEHOLDER =
-  "https://platform-outputs.agnes-ai.space/images/t2i/31d085d0f6524b6c89940b2fe07024ed.png";
+const IMG = {
+  chandelier: "https://platform-outputs.agnes-ai.space/images/t2i/1ce244ee5f4d4ec78bbc779a9bdeff9e.png",
+  pendantGlass: "https://platform-outputs.agnes-ai.space/images/t2i/dee9109f8fb34949956a22cc32eb23f4.png",
+  pendantRattan: "https://platform-outputs.agnes-ai.space/images/t2i/71677c4839ad4876a193587f52f673fe.png",
+  sconce: "https://platform-outputs.agnes-ai.space/images/t2i/91c64ae16ce145d38f8270f76db9962f.png",
+  tableCeramic: "https://platform-outputs.agnes-ai.space/images/t2i/36b7f8ff72134f468c5ac093e98fba63.png",
+  tableConcrete: "https://platform-outputs.agnes-ai.space/images/t2i/50e95d15799b49c1bcaaa37b467a67f8.png",
+  tableMarble: "https://platform-outputs.agnes-ai.space/images/t2i/b683eb9bf24c4066a7560ba579b6f732.png",
+  chandelierAlt: "https://platform-outputs.agnes-ai.space/images/t2i/31d085d0f6524b6c89940b2fe07024ed.png",
+};
+const PLACEHOLDER = IMG.chandelier;
 
 export interface Product {
   id: string;
@@ -63,8 +72,8 @@ export const PRODUCTS: Product[] = [
       "Hand-blown smoked glass pendant with brass fittings. The Aurora casts a warm, diffused glow perfect for kitchen islands and dining nooks. Each piece is unique due to the artisanal glass-blowing process.",
     price: 189.0,
     compareAt: 229.0,
-    image: PLACEHOLDER,
-    images: [PLACEHOLDER, PLACEHOLDER, PLACEHOLDER],
+    image: IMG.pendantGlass,
+    images: [IMG.pendantGlass, IMG.pendantGlass, IMG.pendantGlass],
     features: [
       "Hand-blown smoked glass",
       "Solid brass hardware",
@@ -89,8 +98,8 @@ export const PRODUCTS: Product[] = [
       "A sleek aluminum cone pendant in matte black. Minimalist geometry meets warm light — ideal for modern kitchens, bar counters, and commercial spaces.",
     price: 149.0,
     compareAt: undefined,
-    image: PLACEHOLDER,
-    images: [PLACEHOLDER, PLACEHOLDER, PLACEHOLDER],
+    image: IMG.pendantGlass,
+    images: [IMG.pendantGlass, IMG.pendantGlass, IMG.pendantGlass],
     features: [
       "Powder-coated aluminum shade",
       "Matte black finish",
@@ -115,8 +124,8 @@ export const PRODUCTS: Product[] = [
       "Natural rattan hand-woven into a globe silhouette. Brings organic texture and coastal warmth to bedrooms, reading nooks, and boho-inspired interiors.",
     price: 119.0,
     compareAt: 145.0,
-    image: PLACEHOLDER,
-    images: [PLACEHOLDER, PLACEHOLDER, PLACEHOLDER],
+    image: IMG.pendantGlass,
+    images: [IMG.pendantGlass, IMG.pendantGlass, IMG.pendantGlass],
     features: [
       "Hand-woven natural rattan",
       "Steel inner frame",
@@ -140,8 +149,8 @@ export const PRODUCTS: Product[] = [
     description:
       "A faceted glass shade that refracts light like cut crystal. The Prism pendant doubles as a sculptural statement piece, even when the light is off.",
     price: 219.0,
-    image: PLACEHOLDER,
-    images: [PLACEHOLDER, PLACEHOLDER, PLACEHOLDER],
+    image: IMG.pendantGlass,
+    images: [IMG.pendantGlass, IMG.pendantGlass, IMG.pendantGlass],
     features: [
       "Faceted crystal-cut glass",
       "Brass canopy and stem",
@@ -168,8 +177,8 @@ export const PRODUCTS: Product[] = [
       "Wheel-thrown ceramic base with a reactive glaze in sand drift. Each lamp varies slightly in pattern, making yours truly one of a kind. Topped with a natural linen drum shade.",
     price: 165.0,
     compareAt: 195.0,
-    image: PLACEHOLDER,
-    images: [PLACEHOLDER, PLACEHOLDER, PLACEHOLDER],
+    image: IMG.tableCeramic,
+    images: [IMG.tableCeramic, IMG.tableCeramic, IMG.tableCeramic],
     features: [
       "Hand-thrown ceramic base",
       "Reactive sand-drift glaze",
@@ -193,8 +202,8 @@ export const PRODUCTS: Product[] = [
     description:
       "Raw concrete paired with warm walnut and a linen shade. The Mesa lamp is a study in material contrast — brutalist yet inviting.",
     price: 139.0,
-    image: PLACEHOLDER,
-    images: [PLACEHOLDER, PLACEHOLDER, PLACEHOLDER],
+    image: IMG.tableCeramic,
+    images: [IMG.tableCeramic, IMG.tableCeramic, IMG.tableCeramic],
     features: [
       "Cast concrete base",
       "Oiled walnut accent ring",
@@ -219,8 +228,8 @@ export const PRODUCTS: Product[] = [
       "A solid Carrara marble cylinder carved from a single block. The Nova's timeless silhouette fits bedside tables, consoles, and desks alike.",
     price: 245.0,
     compareAt: 295.0,
-    image: PLACEHOLDER,
-    images: [PLACEHOLDER, PLACEHOLDER, PLACEHOLDER],
+    image: IMG.tableCeramic,
+    images: [IMG.tableCeramic, IMG.tableCeramic, IMG.tableCeramic],
     features: [
       "Solid Carrara marble",
       "Each piece has unique veining",
@@ -247,8 +256,8 @@ export const PRODUCTS: Product[] = [
       "A sweeping arched silhouette in polished brass. The Arc reaches gracefully over sofas and sectionals, delivering focused reading light with mid-century drama.",
     price: 349.0,
     compareAt: 429.0,
-    image: PLACEHOLDER,
-    images: [PLACEHOLDER, PLACEHOLDER, PLACEHOLDER],
+    image: IMG.chandelierAlt,
+    images: [IMG.chandelierAlt, IMG.chandelierAlt, IMG.chandelierAlt],
     features: [
       "Polished brass finish",
       "Heavy marble base (22 lbs)",
@@ -272,8 +281,8 @@ export const PRODUCTS: Product[] = [
     description:
       "Three sculpted walnut legs support a crisp drum shade. Architectural and warm, the Tripod anchors any living room corner with quiet confidence.",
     price: 279.0,
-    image: PLACEHOLDER,
-    images: [PLACEHOLDER, PLACEHOLDER, PLACEHOLDER],
+    image: IMG.chandelierAlt,
+    images: [IMG.chandelierAlt, IMG.chandelierAlt, IMG.chandelierAlt],
     features: [
       "Solid walnut legs",
       "Brass hinge details",
@@ -298,8 +307,8 @@ export const PRODUCTS: Product[] = [
       "A minimalist LED floor lamp with an ultra-thin profile. Touch-sensitive dimming and adjustable color temperature — from warm candlelight to crisp daylight.",
     price: 199.0,
     compareAt: undefined,
-    image: PLACEHOLDER,
-    images: [PLACEHOLDER, PLACEHOLDER, PLACEHOLDER],
+    image: IMG.chandelierAlt,
+    images: [IMG.chandelierAlt, IMG.chandelierAlt, IMG.chandelierAlt],
     features: [
       "Integrated 24W LED array",
       "2700K–5000K adjustable CCT",
@@ -326,8 +335,8 @@ export const PRODUCTS: Product[] = [
       "Hand-applied plaster finish in warm ivory. The Alcove washes walls with a soft upward and downward glow — perfect for hallways, bathrooms, and flanking a headboard.",
     price: 129.0,
     compareAt: 159.0,
-    image: PLACEHOLDER,
-    images: [PLACEHOLDER, PLACEHOLDER, PLACEHOLDER],
+    image: IMG.sconce,
+    images: [IMG.sconce, IMG.sconce, IMG.sconce],
     features: [
       "Hand-finished plaster",
       "Dual-direction light (up + down)",
@@ -351,8 +360,8 @@ export const PRODUCTS: Product[] = [
     description:
       "A ribbed brass cylinder that casts a focused beam downward. Ideal as bedside reading sconces or flanking a bathroom mirror for warm, flattering light.",
     price: 109.0,
-    image: PLACEHOLDER,
-    images: [PLACEHOLDER, PLACEHOLDER, PLACEHOLDER],
+    image: IMG.sconce,
+    images: [IMG.sconce, IMG.sconce, IMG.sconce],
     features: [
       "Ribbed solid brass body",
       "Unlacquered — will patina over time",
@@ -377,8 +386,8 @@ export const PRODUCTS: Product[] = [
       "A classic library-style picture light in antique brass. The Cove directs a wide, even beam across artwork or bookshelves — art gallery quality at home.",
     price: 179.0,
     compareAt: 219.0,
-    image: PLACEHOLDER,
-    images: [PLACEHOLDER, PLACEHOLDER, PLACEHOLDER],
+    image: IMG.sconce,
+    images: [IMG.sconce, IMG.sconce, IMG.sconce],
     features: [
       "Antique brass finish",
       'Adjustable arm (12"–18" extension)',
@@ -402,8 +411,8 @@ export const PRODUCTS: Product[] = [
     description:
       "Woven abaca fiber stretched over a curved frame. The Dune filters light through natural fibers, casting intricate shadow patterns across the wall.",
     price: 149.0,
-    image: PLACEHOLDER,
-    images: [PLACEHOLDER, PLACEHOLDER, PLACEHOLDER],
+    image: IMG.sconce,
+    images: [IMG.sconce, IMG.sconce, IMG.sconce],
     features: [
       "Hand-woven abaca fiber",
       "Rattan frame",
@@ -426,12 +435,13 @@ export const PRODUCTS: Product[] = [
     name: "Cascade Globe Chandelier",
     slug: "cascade-globe-chandelier",
     category: "chandeliers",
+    image: IMG.chandelier,
     description:
       "Five opal glass globes cascade at staggered heights from a brass canopy. The Cascade is a modern centerpiece for dining rooms, grand entryways, and stairwells.",
     price: 499.0,
     compareAt: 599.0,
-    image: PLACEHOLDER,
-    images: [PLACEHOLDER, PLACEHOLDER, PLACEHOLDER],
+    image: IMG.chandelier,
+    images: [IMG.chandelier, IMG.chandelier, IMG.chandelier],
     features: [
       "5 opal glass globes",
       "Brass canopy and arms",
@@ -452,11 +462,12 @@ export const PRODUCTS: Product[] = [
     name: "Sputnik Starburst Chandelier",
     slug: "sputnik-starburst-chandelier",
     category: "chandeliers",
+    image: IMG.chandelier,
     description:
       "A mid-century starburst silhouette with 12 brass arms radiating from a central sphere. Fitted with globe bulbs for a warm, constellation-like effect.",
     price: 389.0,
-    image: PLACEHOLDER,
-    images: [PLACEHOLDER, PLACEHOLDER, PLACEHOLDER],
+    image: IMG.chandelier,
+    images: [IMG.chandelier, IMG.chandelier, IMG.chandelier],
     features: [
       "12-arm brass frame",
       "Matte black + brass finish options",
@@ -477,12 +488,13 @@ export const PRODUCTS: Product[] = [
     name: "Luna Ring Chandelier",
     slug: "luna-ring-chandelier",
     category: "chandeliers",
+    image: IMG.chandelier,
     description:
       "An LED ring suspended by nearly invisible cables. The Luna floats like a halo above dining tables, delivering perfectly even, glare-free illumination.",
     price: 449.0,
     compareAt: undefined,
-    image: PLACEHOLDER,
-    images: [PLACEHOLDER, PLACEHOLDER, PLACEHOLDER],
+    image: IMG.chandelier,
+    images: [IMG.chandelier, IMG.chandelier, IMG.chandelier],
     features: [
       "Integrated 48W LED, 3000K",
       '36" diameter ring',
@@ -509,8 +521,8 @@ export const PRODUCTS: Product[] = [
       "A classic lantern-style path light in weatherproof bronze. Perfect for lining walkways, garden borders, and driveways with a warm welcome.",
     price: 89.0,
     compareAt: 109.0,
-    image: PLACEHOLDER,
-    images: [PLACEHOLDER, PLACEHOLDER, PLACEHOLDER],
+    image: IMG.chandelierAlt,
+    images: [IMG.chandelierAlt, IMG.chandelierAlt, IMG.chandelierAlt],
     features: [
       "Die-cast aluminum, bronze finish",
       "IP65 weatherproof rating",
@@ -534,8 +546,8 @@ export const PRODUCTS: Product[] = [
     description:
       "A sleek cylindrical bollard with a 360-degree light aperture. The Dune defines perimeters and driveways with a clean, architectural glow.",
     price: 119.0,
-    image: PLACEHOLDER,
-    images: [PLACEHOLDER, PLACEHOLDER, PLACEHOLDER],
+    image: IMG.chandelierAlt,
+    images: [IMG.chandelierAlt, IMG.chandelierAlt, IMG.chandelierAlt],
     features: [
       "304 stainless steel, brushed finish",
       "IP65 weatherproof",
@@ -560,8 +572,8 @@ export const PRODUCTS: Product[] = [
       "A sturdy wall-mounted fixture in matte black. The Haven flanks front doors and patios, projecting warm light downward while keeping the bulb hidden from view.",
     price: 99.0,
     compareAt: 129.0,
-    image: PLACEHOLDER,
-    images: [PLACEHOLDER, PLACEHOLDER, PLACEHOLDER],
+    image: IMG.chandelierAlt,
+    images: [IMG.chandelierAlt, IMG.chandelierAlt, IMG.chandelierAlt],
     features: [
       "Powder-coated aluminum",
       "IP54 weatherproof",
@@ -585,8 +597,8 @@ export const PRODUCTS: Product[] = [
     description:
       "A rechargeable, portable table lamp inspired by campfire embers. IP65 rated, dimmable, and built for dinner al fresco late into the evening.",
     price: 79.0,
-    image: PLACEHOLDER,
-    images: [PLACEHOLDER, PLACEHOLDER, PLACEHOLDER],
+    image: IMG.chandelierAlt,
+    images: [IMG.chandelierAlt, IMG.chandelierAlt, IMG.chandelierAlt],
     features: [
       "Rechargeable, 20-hour battery life",
       "IP65 waterproof",
@@ -611,8 +623,8 @@ export const PRODUCTS: Product[] = [
       "A 48-foot festoon string with 15 shatterproof LED globes. Transform any backyard, patio, or event space into a warm, festive setting in minutes.",
     price: 129.0,
     compareAt: 159.0,
-    image: PLACEHOLDER,
-    images: [PLACEHOLDER, PLACEHOLDER, PLACEHOLDER],
+    image: IMG.chandelierAlt,
+    images: [IMG.chandelierAlt, IMG.chandelierAlt, IMG.chandelierAlt],
     features: [
       "48 ft string, 15 sockets",
       "Shatterproof PET globes",
@@ -682,7 +694,7 @@ export const REVIEWS: Review[] = [
     id: "rev_001",
     productId: "prod_001",
     author: "Claire M.",
-    avatar: PLACEHOLDER,
+    avatar: IMG.chandelierAlt,
     rating: 5,
     title: "Absolutely stunning over our island",
     body: "We hung two of these over our kitchen island and they completely transformed the space. The smoked glass is even more beautiful in person — warm light without any harsh glare. Our contractor said the brass hardware was top quality and easy to install.",
@@ -692,7 +704,7 @@ export const REVIEWS: Review[] = [
     id: "rev_002",
     productId: "prod_008",
     author: "David R.",
-    avatar: PLACEHOLDER,
+    avatar: IMG.chandelierAlt,
     rating: 5,
     title: "The perfect reading lamp",
     body: "The Arc reaches over our sectional perfectly. The marble base is seriously heavy (in a good way), so no wobbling. Took about 20 minutes to assemble. The brass is polished but not too shiny — just right.",
@@ -702,7 +714,7 @@ export const REVIEWS: Review[] = [
     id: "rev_003",
     productId: "prod_011",
     author: "Sarah L.",
-    avatar: PLACEHOLDER,
+    avatar: IMG.chandelierAlt,
     rating: 4,
     title: "Beautiful plaster finish, a bit delicate",
     body: "We installed four of these in our hallway and they look like they're original to our 1920s home. The plaster finish is gorgeous. Only giving 4 stars because one arrived with a tiny chip — customer service replaced it immediately, but worth noting they are delicate.",
@@ -712,7 +724,7 @@ export const REVIEWS: Review[] = [
     id: "rev_004",
     productId: "prod_015",
     author: "James K.",
-    avatar: PLACEHOLDER,
+    avatar: IMG.chandelierAlt,
     rating: 5,
     title: "Dining room showstopper",
     body: "We get compliments on this chandelier from everyone who comes over. The staggered globes are dramatic but not overwhelming. Paired it with a dimmer switch and it's perfect for both dinner parties and quiet weeknight meals.",
@@ -722,7 +734,7 @@ export const REVIEWS: Review[] = [
     id: "rev_005",
     productId: "prod_005",
     author: "Maya T.",
-    avatar: PLACEHOLDER,
+    avatar: IMG.chandelierAlt,
     rating: 5,
     title: "One-of-a-kind ceramic lamp",
     body: "I love that each lamp is unique because of the reactive glaze. Mine has more blue tones in the drips than my friend's, and we both prefer our own — that's the beauty of handmade. The linen shade is high quality too.",
@@ -732,7 +744,7 @@ export const REVIEWS: Review[] = [
     id: "rev_006",
     productId: "prod_022",
     author: "Tom & Elena G.",
-    avatar: PLACEHOLDER,
+    avatar: IMG.chandelierAlt,
     rating: 5,
     title: "Our patio is now our favorite room",
     body: "We strung two sets end-to-end across our whole backyard. The warm glow is exactly what we wanted — cozy but bright enough to eat by. They've survived two thunderstorms already with no issues. Best patio purchase we've made.",
